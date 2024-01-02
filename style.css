@@ -1,0 +1,20 @@
+/* FILEPATH: /Users/colinlewandowski/Code/Html/Portfolio/style.css */
+
+/* Reset default styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add some basic styles */
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Add more styles here */
