@@ -408,8 +408,6 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto 0;
 }
 
-
-
 .timeline {
     display: flex;
     align-items: center;
@@ -418,40 +416,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20px 0;
     height: 450px;
 }
-
-.timeline-items-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    height: 100%;
-    width: 100%;
-    align-items: center;
-}
-
-.timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    flex: 1;
-    text-align: center;
-    transform: translateY(40%);
-}
-
-.timeline-item:nth-child(odd) {
-    flex-direction: column-reverse;
-    transform: translateY(-40%);
-}
-
-.timeline-point {
-    width: 20px;
-    height: 20px;
-    background-color: var(--grey);
-    border-radius: 50%;
-    z-index: 1;
-}
-
-
 
 .timeline::before {
     content: '';
@@ -463,6 +427,79 @@ h1, h2, h3, h4, h5, h6 {
     background: var(--grey);
     z-index: 0;
 }
+
+.timeline-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    height: 250px;
+}
+
+.timeline-item:nth-child(even) {
+    top: 17%;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: column-reverse;
+    bottom: 17%;
+}
+
+.timeline-point {
+    width: 20px;
+    min-height: 20px;
+    background-color: var(--grey);
+    border-radius: 50%;
+    z-index: 1;
+    margin: 30px 0;
+}
+
+.timeline-item .job-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--lighter-grey);
+    margin: 0 0 10px 0;
+}
+
+
+.timeline-item:nth-child(odd) .job-title {
+    order: 1;
+}
+
+.timeline-item .job-description {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-grey);
+    margin: 0;
+}
+
+.graduation {
+    font-weight: bolder;
+    color: var(--lighter-grey);
+}
+
+.timeline-item .date {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cyan);
+    margin: 0;
+}
+
+
+
+
+
+
 
 
 
