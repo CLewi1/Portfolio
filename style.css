@@ -379,6 +379,192 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* //////////////////////////// Experience Page ////////////////////////////// */
+
+#experience {
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+}
+
+.experience-page-container {
+    display: flex;
+    padding: 30px 30px 30px 30px;
+    width: 65%;
+    margin: 0 auto;
+    height: 600px;
+    background-color: rgba(35, 53, 84, 0.5); 
+    box-shadow: -35px 35px 0px 5px rgba(2,12,27,0.5);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.experience-page-title {
+    font-size: 26px;
+    margin: 0;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.experience-page-title::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 1px;
+    background-color: var(--lightest-navy);
+    margin-right: 20px;
+    position: relative;
+}
+
+.experience-page-title::after {
+    content: "";
+    display: flex;
+    width: 50%;
+    height: 1px;
+    background-color: var(--lightest-navy);
+    margin-left: 20px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-page-body {
+    margin: auto 0;
+}
+
+.timeline {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 20px 0;
+    padding: 20px 0;
+    height: 450px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 2px;
+    background: var(--grey);
+    z-index: 0;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    right: 4%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 0 7px 15px;
+    border-color: transparent transparent transparent var(--grey);
+    z-index: 1;
+}
+
+
+
+.timeline-items-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+    align-items: center;
+}
+
+.timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    height: 250px;
+}
+
+.timeline-item:nth-child(even) {
+    top: 16.4%;
+}
+
+.timeline-item:nth-child(odd) {
+    flex-direction: column-reverse;
+    bottom: 16.4%;
+}
+
+.timeline-point {
+    width: 20px;
+    min-height: 20px;
+    background-color: var(--grey);
+    border-radius: 50%;
+    z-index: 1;
+    margin: 30px 0 0 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-point {
+    margin: 0 0 30px 0;
+}
+
+.clickable-div {
+    display: block;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.timeline-content-box {
+    margin: 15px 0 0 0;
+    padding: 15px;
+}
+
+.timeline-content-box:hover {
+    background-color: rgba(35, 53, 84, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-content-box {
+    margin: 0 0 15px 0;
+}
+
+.timeline-item .job-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--lighter-grey);
+    margin: 0 0 10px 0;
+}
+
+
+.timeline-item:nth-child(odd) .job-title {
+    order: 1;
+}
+
+.timeline-item .job-description {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--light-grey);
+    margin: 0;
+}
+
+.graduation {
+    font-weight: bolder;
+    color: var(--lighter-grey);
+}
+
+.timeline-item .date {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--cyan);
+    margin: 0;
+}
+
+
+
+
+
+
+
 
 
 
