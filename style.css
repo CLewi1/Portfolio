@@ -560,8 +560,155 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* //////////////////////////// Proects Page ////////////////////////////// */
 
+#projects {
+    padding: 150px 0;
+    display: flex;
+    align-items: center;
+}
 
+.projects-page-container {
+    display: flex;
+    padding: 30px 30px 30px 30px;
+    width: 65%;
+    margin: 0 auto;
+    height: 700px;
+    background-color: rgba(35, 53, 84, 0.5); 
+    box-shadow: 0 20px 0px 5px rgba(2,12,27,0.5);
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.projects-page-title {
+    font-size: 26px;
+    display: flex;
+    align-items: center;
+}
+
+.projects-page-title::after {
+    content: "";
+    display: flex;
+    width: 60%;
+    height: 1px;
+    background-color: var(--lightest-navy);
+    margin-left: 20px;
+    position: relative;
+    top: -5px;
+}
+
+.projects-page-body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: 20px 0;
+    width: 100%;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+    row-gap: 20px
+}
+
+.project {
+    height: 275px;
+    width: 300px;
+    position: relative;
+    background-color: rgba(35, 53, 84, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.project-cover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(48, 48, 48, 0.9); 
+    transition: opacity 0.3s ease;
+}
+
+.project-cover:hover {
+    opacity: 1;
+}
+
+.project-cover .project-description {
+    color: var(--cyan);
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    margin: 10px;
+    height: 60%;
+}
+
+.project-cover .project-github-link {
+    text-decoration: none;
+    color: var(--cyan);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px auto;
+    background: rgba(45, 212, 191, .1);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-cover .project-github-link:hover {
+    background-color: rgba(45, 212, 191, .3);
+}
+
+.project img {
+    width: 310px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.project-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--lighter-grey);
+    margin-left: 10px;
+}
+
+.project .technologies ul {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.project .technologies li {
+    margin-left: 10px;
+    color: var(--cyan);
+    background: rgba(45, 212, 191, .1);
+    border-radius: 3px;
+    padding: 2px 5px;
+}
+
+.archive {
+    height: 275px;
+    width: 300px;
+    position: relative;
+    overflow: hidden;
+    background-color: rgba(35, 53, 84, 0.6);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.archive-link {
+    text-decoration: none;
+    color: var(--cyan);
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
 
 
 
