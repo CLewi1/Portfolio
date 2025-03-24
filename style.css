@@ -335,9 +335,9 @@ h6 {
 }
 
 .about-page-body {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-template-rows: minmax(100px, auto);
+  display: flex;
+/*   grid-template-columns: 3fr 2fr;
+  grid-template-rows: minmax(100px, auto); */
   height: 100%; /* Make the grid container take up the full height of its parent */
 }
 
@@ -345,6 +345,7 @@ h6 {
   font-size: var(--fz-xl);
   font-family: var(--font-sans);
   margin-top: 15px;
+  max-width: 500px;
 }
 
 .about-page-image {
@@ -352,6 +353,8 @@ h6 {
   max-width: 230px;
   height: auto;
   margin: auto;
+  margin-top: 0;
+  margin-top: 20px;
   grid-column: 2 / 3;
   grid-row: 1 / 4;
   border-radius: 3%;
