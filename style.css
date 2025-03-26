@@ -188,7 +188,7 @@ h6 {
   color: var(--cyan);
 }
 
-.socials-side-panel::after {
+socials-side-panel::after {
   content: "";
   width: 1px;
   height: 90px;
@@ -370,6 +370,7 @@ h6 {
   box-shadow: 35px 35px 0px 5px rgba(2, 12, 27, 0.5);
   border-radius: 10px;
   flex-direction: column;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-page-title {
@@ -387,11 +388,14 @@ h6 {
   justify-items: center;
   align-items: center;
   row-gap: 20px;
+  column-gap: 10px;
 }
 
 .skills-software-icons-container img {
   width: auto;
-  height: 90px;
+  max-width: 100%;
+  height: auto;
+  max-height: 90px;
   margin: 0 auto;
 }
 
