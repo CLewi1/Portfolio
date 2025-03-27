@@ -56,6 +56,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 200px; /* Add consistent spacing between sections */
 }
 
 svg {
@@ -81,18 +82,12 @@ h6 {
 
 /* //////////////////////////// Navbar ////////////////////////////// */
 
-.logo {
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-}
+
 
 .logo img {
   height: 120px;
   width: auto;
 }
-
-/* .logo:hover {
-    not sure how to implement this yet
-} */
 
 .navbar {
   display: flex;
@@ -194,7 +189,7 @@ h6 {
   color: var(--cyan);
 }
 
-.socials-side-panel::after {
+socials-side-panel::after {
   content: "";
   width: 1px;
   height: 90px;
@@ -249,7 +244,7 @@ h6 {
 
 #hero {
   height: 75vh;
-  margin-top: 100px;
+  margin: 100px 0;
 }
 
 .hero-page-container {
@@ -298,9 +293,10 @@ h6 {
 /* //////////////////////////// About Page ////////////////////////////// */
 
 #about {
-  padding: 150px 0 100px 0;
+  margin: 100px 0;
   display: flex;
   align-items: center;
+  height: 75vh;
 }
 
 .about-page-container {
@@ -335,16 +331,15 @@ h6 {
 }
 
 .about-page-body {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-template-rows: minmax(100px, auto);
-  height: 100%; /* Make the grid container take up the full height of its parent */
+  display: flex;
+  height: 100%; 
 }
 
 .about-page-body p {
   font-size: var(--fz-xl);
   font-family: var(--font-sans);
   margin-top: 15px;
+  max-width: 500px;
 }
 
 .about-page-image {
@@ -352,6 +347,8 @@ h6 {
   max-width: 230px;
   height: auto;
   margin: auto;
+  margin-top: 0;
+  margin-top: 20px;
   grid-column: 2 / 3;
   grid-row: 1 / 4;
   border-radius: 3%;
@@ -360,9 +357,10 @@ h6 {
 /* //////////////////////////// Skills Page ////////////////////////////// */
 
 #skills {
-  padding: 150px 0;
+  margin: 100px 0;
   display: flex;
   align-items: center;
+  height: 75vh;
 }
 
 .skills-page-container {
@@ -375,6 +373,8 @@ h6 {
   box-shadow: 35px 35px 0px 5px rgba(2, 12, 27, 0.5);
   border-radius: 10px;
   flex-direction: column;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+  min-height: fit-content;
 }
 
 .skills-page-title {
@@ -392,18 +392,21 @@ h6 {
   justify-items: center;
   align-items: center;
   row-gap: 20px;
+  column-gap: 10px;
 }
 
 .skills-software-icons-container img {
   width: auto;
-  height: 90px;
+  max-width: 100%;
+  height: auto;
+  max-height: 90px;
   margin: 0 auto;
 }
 
 /* //////////////////////////// Experience Page ////////////////////////////// */
 
 #experience {
-  padding: 150px 0;
+  margin: 150px 0;
   display: flex;
   align-items: center;
 }
@@ -418,6 +421,7 @@ h6 {
   box-shadow: -35px 35px 0px 5px rgba(2, 12, 27, 0.5);
   border-radius: 10px;
   flex-direction: column;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-page-title {
@@ -580,7 +584,7 @@ h6 {
 /* //////////////////////////// Projects Page ////////////////////////////// */
 
 #projects {
-  padding: 150px 0;
+  margin: 200px 0;
   display: flex;
   align-items: center;
 }
@@ -595,6 +599,8 @@ h6 {
   box-shadow: 0 20px 0px 5px rgba(2, 12, 27, 0.5);
   border-radius: 10px;
   flex-direction: column;
+  min-height: fit-content;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects-page-title {
@@ -615,20 +621,24 @@ h6 {
 }
 
 .projects-page-body {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   margin: 20px 0;
   width: 100%;
   height: 100%;
   justify-items: center;
   align-items: center;
   row-gap: 20px;
+  column-gap: auto;
 }
 
 .project {
-  height: 275px;
-  width: 300px;
+  height: 250px;
+  width: 40%;
+  max-width: 300px;
+  min-width: fit-content;
   position: relative;
   background-color: rgba(35, 53, 84, 0.6);
   border-radius: 5px;
@@ -644,6 +654,7 @@ h6 {
   opacity: 0;
   background: rgba(48, 48, 48, 0.9);
   transition: opacity 0.3s ease;
+  border-radius: 5px;
 }
 
 .project-cover:hover {
@@ -676,8 +687,8 @@ h6 {
 }
 
 .project img {
-  width: 310px;
-  height: 200px;
+  width: 100%;
+  height: 65%;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -707,8 +718,8 @@ h6 {
 }
 
 .archive {
-  height: 275px;
-  width: 300px;
+  height: 250px;
+  width: 275px;
   position: relative;
   overflow: hidden;
   background-color: rgba(35, 53, 84, 0.6);
@@ -746,6 +757,7 @@ h6 {
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-page-title {
@@ -843,6 +855,101 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(76, 86, 110);
   border-radius: 6px;
   border: 3px solid var(--navy);
+}
+
+/* //////////////////////////// Hamburger Menu ////////////////////////////// */
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 20; /* Higher z-index to stay on top */
+  position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: var(--cyan);
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Hamburger animation */
+.hamburger-menu.open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 8px);
+
+}
+
+.hamburger-menu.open .bar2 {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100vh;
+  background-color: var(--light-navy);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.5);
+  opacity: 95%;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 2rem 0;
+}
+
+.mobile-menu a {
+  color: var(--lighter-grey);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--cyan);
+}
+
+.mobile-resume {
+  color: var(--cyan) !important;
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.mobile-resume:hover {
+  transform: translate(-2.75px, -2.75px);
+  box-shadow: 2.75px 2.75px 0px var(--cyan);
+  transition: all 0.2s ease;
 }
 
 

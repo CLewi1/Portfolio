@@ -22,9 +22,27 @@
           <li><a class="nav-elements" href="#projects">Projects</a></li>
           <li><a class="nav-elements" href="#contact">Contact</a></li>
         </ol>
-        <a class="resume-button" href="img/resume.pdf" target="_blank">Resume</a>
+        <a class="resume-button" href="img/Colin_Lewandowski_Resume.pdf" target="_blank">Resume</a>
       </div>
       
+      <!-- Hamburger Menu -->
+      <div class="hamburger-menu">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="img/resume.pdf" target="_blank" class="mobile-resume">Resume</a></li>
+      </ul>
     </div>
 
     <!-- Socials Side Panel -->
@@ -167,13 +185,11 @@
               I'm currently a third year student at the University of
               Wisconsin-Whitewater pursuing a degree in Computer Science with a
               minor in Cyber Security.
-            </p>
-            <p>
+              <br><br>
               I'm currently working as an IT Intern for the City of Elmhurst
               while also building numerous projects on the side. I'm always
               trying to keep myself busy working on my next big idea!
-            </p>
-            <p>
+              <br><br>
               When I'm not at the computer, I'm usually running, finding a
               beach, or crossing off another item on my bucket list.
             </p>
@@ -185,6 +201,7 @@
           </div>
         </div>
       </section>
+
       <section id="skills">
         <div class="skills-page-container">
           <div class="skills-page-title">
@@ -239,11 +256,13 @@
               alt="c sharp logo"
               class="software-icons"
             />
+            <div class="spacer"></div>
             <img
               src="img/nodejs-logo.png"
               alt="node js logo"
               class="software-icons"
             />
+            <div class="spacer"></div>
             <img
               src="img/react-logo.png"
               alt="react logo"
@@ -252,12 +271,34 @@
           </div>
         </div>
       </section>
+
       <section id="experience">
         <div class="experience-page-container">
           <h1 class="experience-page-title">Experience</h1>
           <div class="experience-page-body">
             <div class="timeline">
               <div class="timeline-items-container">
+                <div class="timeline-item">
+                  <h3 class="date">Aug 2019 - May 2022</h3>
+                  <div class="timeline-point"></div>
+                  <a
+                    href="https://sites.google.com/elmhurst205.org/yorkbusinessdepartment/internships/technology-services-internship"
+                    target="_blank"
+                    class="clickable-div"
+                  >
+                    <div class="timeline-content-box">
+                      <h3 class="job-title">
+                        York High School Tech Internship
+                      </h3>
+                      <p class="job-description">
+                        Worked with the IT department at York High School to
+                        assist with the technology needs of students and staff.
+                        Assisted students with their chromebook issues and 
+                        provided support for teachers with classroom technology.
+                      </p>
+                    </div>
+                  </a>
+                </div>
                 <div class="timeline-item">
                   <h3 class="date">Aug 2022 - Present</h3>
                   <div class="timeline-point"></div>
@@ -324,7 +365,7 @@
                 >
               </div>
               <img
-                src="img/project1.png"
+                src="img/SongScope.png"
                 alt="SongScope"
                 class="project-image"
               />
@@ -339,55 +380,59 @@
             </div>
             <div class="project">
               <div class="project-cover">
-                <p class="project-description">Testing</p>
+                <p class="project-description">A C# Blazor Web App made for a Software Engineering capstone course. The program uses the ESPN API along with the OpenAI API to process NFL play-by-play data and speak it out loud to the user in an interactive way.</p>
                 <a
                   class="project-github-link"
                   target="_blank"
-                  href="https://github.com/wilman2019/SongScope/tree/main"
+                  href="https://github.com/Brogs360/NFL-Play-by-Play"
                   >Check it out on GitHub!</a
                 >
               </div>
               <img
-                src="img/project1.png"
-                alt="Project 2"
+                src="img/NFL-Play-By-Play.png"
+                alt="NFL Play-by-Play"
                 class="project-image"
               />
-              <h3 class="project-title">Project 2</h3>
+              <h3 class="project-title">NFL Play-by-Play</h3>
               <div class="technologies">
                 <ul>
-                  <li>Test</li>
+                  <li>C#</li>
+                  <li>Blazor</li>
+                  <li>SQLite</li>
                 </ul>
               </div>
             </div>
             <div class="project">
               <div class="project-cover">
-                <p class="project-description">Testing</p>
+                <p class="project-description">A mock chess game built using java swing for a class final project. It features a clean MVC architecture with a board display, move tracking, save/load game functionality, and game state indicators.</p>
                 <a
                   class="project-github-link"
                   target="_blank"
-                  href="https://github.com/wilman2019/SongScope/tree/main"
+                  href="https://github.com/CLewi1/JavaChess"
                   >Check it out on GitHub!</a
                 >
               </div>
               <img
-                src="img/project1.png"
-                alt="Project 3"
+                src="img/JavaChess.png"
+                alt="Java Chess"
                 class="project-image"
               />
-              <h3 class="project-title">Project 3</h3>
+              <h3 class="project-title">Java Chess</h3>
               <div class="technologies">
                 <ul>
-                  <li>Test</li>
+                  <li>Java</li>
+                  <li>Java Swing</li>
+                  <li>Algorithms</li>
                 </ul>
               </div>
             </div>
             <div class="project">
               <div class="project-cover">
-                <p class="project-description">Testing</p>
+                <p class="project-description">Currently Building</p>
                 <a
                   class="project-github-link"
                   target="_blank"
-                  href="https://github.com/wilman2019/SongScope/tree/main"
+                  href="https://github.com/CLewi1/CS460-Project"
                   >Check it out on GitHub!</a
                 >
               </div>
@@ -396,39 +441,14 @@
                 alt="Project 4"
                 class="project-image"
               />
-              <h3 class="project-title">Project 4</h3>
+              <h3 class="project-title">DeckLink</h3>
               <div class="technologies">
                 <ul>
-                  <li>Test</li>
+                  <li>Python</li>
+                  <li>Flask</li>
+                  <li>Websockets</li>
                 </ul>
               </div>
-            </div>
-            <div class="project">
-              <div class="project-cover">
-                <p class="project-description">Testing</p>
-                <a
-                  class="project-github-link"
-                  target="_blank"
-                  href="https://github.com/wilman2019/SongScope/tree/main"
-                  >Check it out on GitHub!</a
-                >
-              </div>
-              <img
-                src="img/project1.png"
-                alt="Project 5"
-                class="project-image"
-              />
-              <h3 class="project-title">Project 5</h3>
-              <div class="technologies">
-                <ul>
-                  <li>Test</li>
-                </ul>
-              </div>
-            </div>
-            <div class="archive">
-              <a href="/archive.html" class="archive-link"
-                >View My Full Project Archive &rarr;</a
-              >
             </div>
           </div>
         </div>
@@ -457,5 +477,6 @@
         <p>&copy; 2024</p>
       </a>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
