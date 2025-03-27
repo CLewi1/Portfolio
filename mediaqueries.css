@@ -119,10 +119,6 @@
   .clickable-div {
     flex: 3;
   }
-  
-  .projects-page-body {
-
-  }
 }
 
 /* For tablets and below */
@@ -241,7 +237,7 @@
 @media (max-width: 480px) {
 
   #hero {
-    margin-bottom: 200px; 
+    margin-bottom: 300px; 
   }
   .hero-page-container {
     width: 95%;
@@ -249,7 +245,7 @@
   }
 
   #about {
-    margin-bottom: 200px; 
+    margin-bottom: 300px; 
   }
 
   .about-page-container {
