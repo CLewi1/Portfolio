@@ -267,7 +267,7 @@
     width: 95%;
     box-shadow: 0px 0px 0px 1px rgba(2, 12, 27, 0.5);
     min-height: fit-content;
-    height: 100vh;
+    height: auto; /* Changed from 100vh to auto to prevent overflow */
   }
 
   .skills-software-icons-container img {
@@ -292,10 +292,19 @@
     min-height: fit-content;
   }
 
+  #projects {
+    margin-top: 500px;
+  }
+
   .projects-page-container {
     width: 95%;
     box-shadow: 0px 0px 0px 1px rgba(2, 12, 27, 0.5);
     min-height: fit-content;
+    height: auto; /* Changed from 100vh to auto to prevent overflow */
+  }
+
+  #contact {
+    margin-top: 300px;
   }
 
   .contact-page-container {

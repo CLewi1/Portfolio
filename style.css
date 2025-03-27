@@ -880,7 +880,8 @@ body::-webkit-scrollbar-thumb {
 
 /* Hamburger animation */
 .hamburger-menu.open .bar1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  transform: rotate(-45deg) translate(-6px, 8px);
+
 }
 
 .hamburger-menu.open .bar2 {
