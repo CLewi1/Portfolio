@@ -56,6 +56,7 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 200px; /* Add consistent spacing between sections */
 }
 
 svg {
@@ -243,7 +244,7 @@ socials-side-panel::after {
 
 #hero {
   height: 75vh;
-  margin-top: 100px;
+  margin: 100px 0;
 }
 
 .hero-page-container {
@@ -292,9 +293,10 @@ socials-side-panel::after {
 /* //////////////////////////// About Page ////////////////////////////// */
 
 #about {
-  padding: 150px 0 100px 0;
+  margin: 100px 0;
   display: flex;
   align-items: center;
+  height: 75vh;
 }
 
 .about-page-container {
@@ -355,9 +357,10 @@ socials-side-panel::after {
 /* //////////////////////////// Skills Page ////////////////////////////// */
 
 #skills {
-  padding: 150px 0;
+  margin: 100px 0;
   display: flex;
   align-items: center;
+  height: 75vh;
 }
 
 .skills-page-container {
@@ -371,6 +374,7 @@ socials-side-panel::after {
   border-radius: 10px;
   flex-direction: column;
   transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
+  min-height: fit-content;
 }
 
 .skills-page-title {
@@ -402,7 +406,7 @@ socials-side-panel::after {
 /* //////////////////////////// Experience Page ////////////////////////////// */
 
 #experience {
-  padding: 150px 0;
+  margin: 150px 0;
   display: flex;
   align-items: center;
 }
@@ -417,6 +421,7 @@ socials-side-panel::after {
   box-shadow: -35px 35px 0px 5px rgba(2, 12, 27, 0.5);
   border-radius: 10px;
   flex-direction: column;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .experience-page-title {
@@ -579,7 +584,7 @@ socials-side-panel::after {
 /* //////////////////////////// Projects Page ////////////////////////////// */
 
 #projects {
-  padding: 150px 0;
+  margin: 200px 0;
   display: flex;
   align-items: center;
 }
@@ -595,6 +600,7 @@ socials-side-panel::after {
   border-radius: 10px;
   flex-direction: column;
   min-height: fit-content;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projects-page-title {
@@ -630,7 +636,9 @@ socials-side-panel::after {
 
 .project {
   height: 250px;
-  width: 275px;
+  width: 40%;
+  max-width: 300px;
+  min-width: fit-content;
   position: relative;
   background-color: rgba(35, 53, 84, 0.6);
   border-radius: 5px;
@@ -683,7 +691,6 @@ socials-side-panel::after {
   height: 65%;
   object-fit: cover;
   border-radius: 5px;
-  margin-top: 5px;
 }
 
 .project-title {
@@ -750,6 +757,7 @@ socials-side-panel::after {
   box-sizing: border-box;
   position: relative;
   margin: 0 auto;
+  transition: width 0.3s ease, height 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-page-title {
@@ -847,6 +855,100 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(76, 86, 110);
   border-radius: 6px;
   border: 3px solid var(--navy);
+}
+
+/* //////////////////////////// Hamburger Menu ////////////////////////////// */
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 20; /* Higher z-index to stay on top */
+  position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: var(--cyan);
+  transition: 0.4s;
+  border-radius: 2px;
+}
+
+/* Hamburger animation */
+.hamburger-menu.open .bar1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu.open .bar2 {
+  opacity: 0;
+}
+
+.hamburger-menu.open .bar3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100vh;
+  background-color: var(--light-navy);
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s ease-in-out;
+  box-shadow: -10px 0px 30px rgba(0, 0, 0, 0.5);
+  opacity: 95%;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 2rem 0;
+}
+
+.mobile-menu a {
+  color: var(--lighter-grey);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--cyan);
+}
+
+.mobile-resume {
+  color: var(--cyan) !important;
+  border: 1px solid var(--cyan);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.mobile-resume:hover {
+  transform: translate(-2.75px, -2.75px);
+  box-shadow: 2.75px 2.75px 0px var(--cyan);
+  transition: all 0.2s ease;
 }
 
 
